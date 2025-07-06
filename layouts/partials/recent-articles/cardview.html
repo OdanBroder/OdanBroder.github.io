@@ -1,0 +1,22 @@
+{{/* 
+  layouts/partials/recent-articles/cardview.html
+  Shows recent articles in card view, filtered by mainSections.
+*/}}
+
+{{ $recentArticles := 5 }}
+{{ with .Site.Params.homepage.showRecentItems }}
+  {{ $recentArticles = . }}
+{{ end }}
+
+{{ $sections := .Site.Params.mainSections | default (slice "posts") }}
+
+{{/* Only include pages that have a valid .Date (to avoid sort errors) */}}
+{{ $pages := where site.RegularPages "Section" "in" $sections }}
+{{ $filtered := where $pages "Date" "!=" nil }}
+{{ $sorted := sort $filtered "Date" "desc" }}
+
+<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+  {{ range first $recentArticles $sorted }}
+    {{ partial "article-link/card.html" . }}
+  {{ end }}
+</section>

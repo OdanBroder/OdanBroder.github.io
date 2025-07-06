@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pwn on Doan Duc Anh</title>
+    <link>http://localhost:1313/tags/pwn/</link>
+    <description>Recent content in Pwn on Doan Duc Anh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Doan Duc Anh was here</copyright>
+    <lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/pwn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Compress</title>
+      <link>http://localhost:1313/ctf/pwnme-2025/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ctf/pwnme-2025/</guid>
+      <description>Just the small description for challenge compress in  PwnMe CTF Quals 2025</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/pwnme-2025/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>pwnable.tw</title>
+      <link>http://localhost:1313/ctf/pwnable.tw/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/ctf/pwnable.tw/</guid>
+      <description>&lt;h2 class=&#34;relative group&#34;&gt;calc 
+    &lt;div id=&#34;calc&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#calc&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h2&gt;
+
+&lt;h3 class=&#34;relative group&#34;&gt;Let&amp;rsquo;s check 
+    &lt;div id=&#34;lets-check&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;
+    
+    &lt;span
+        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100&#34;&gt;
+        &lt;a class=&#34;group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline&#34; href=&#34;#lets-check&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;
+    &lt;/span&gt;        
+    
+&lt;/h3&gt;
+&lt;p&gt;
+
+
+
+
+
+
+&lt;figure&gt;
+      &lt;img
+    class=&#34;my-0 rounded-md&#34;
+    loading=&#34;lazy&#34;
+    decoding=&#34;async&#34;
+    fetchpriority=&#34;low&#34;
+    alt=&#34;images&#34;
+    srcset=&#34;
+      /ctf/pwnable.tw/img/calc/main_hu_7567b087439d179b.png  330w,
+      /ctf/pwnable.tw/img/calc/main_hu_9d1bc36a6fb8d199.png  660w,
+      /ctf/pwnable.tw/img/calc/main_hu_27ab9df07f59010b.png 1280w
+    &#34;
+    data-zoom-src=&#34;http://localhost:1313/ctf/pwnable.tw/img/calc/main.png&#34;
+    src=&#34;http://localhost:1313/ctf/pwnable.tw/img/calc/main.png&#34;&gt;
+
+  
+&lt;/figure&gt;
+&lt;/p&gt;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/ctf/pwnable.tw/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
