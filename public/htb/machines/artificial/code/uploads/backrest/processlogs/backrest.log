@@ -1,0 +1,19 @@
+{"level":"warn","ts":1741126673.1377373,"msg":"attempting graceful shutdown, to force termination press Ctrl+C again"}
+{"level":"info","ts":1741126673.1378818,"msg":"HTTP gateway shutdown"}
+{"level":"info","ts":1741126673.1379092,"msg":"shutting down orchestrator loop, context cancelled."}
+{"level":"info","ts":1741126673.156254,"msg":"backrest version 1.7.2@b885f1ec9e43e4bfe8f4f6f02bda83f5e7d88574, using log directory: /opt/backrest/processlogs"}
+{"level":"info","ts":1741126673.1794243,"msg":"scrubbing operation log for incomplete operations"}
+{"level":"info","ts":1741126673.1795938,"msg":"scrubbed operation log for incomplete operations","duration":0.000171281,"incomplete_ops":0,"incomplete_repos":0,"deleted_ops":0}
+{"level":"info","ts":1741126673.1796222,"msg":"scheduling default tasks, waiting for task queue reset."}
+{"level":"info","ts":1741126673.1796854,"msg":"reset task queue, scheduling new task set","timezone":"Local"}
+{"level":"info","ts":1741126673.1797,"msg":"scheduled task","task":"collect garbage","runAt":"2025-03-04T22:17:54Z"}
+{"level":"info","ts":1741126673.179705,"msg":"orchestrator created"}
+{"level":"debug","ts":1741126673.1797245,"msg":"loading auth secret from file"}
+{"level":"info","ts":1741126673.1798701,"msg":"starting orchestrator loop"}
+{"level":"debug","ts":1741126673.1800668,"msg":"syncmanager no known host peers declared, sync client exiting early"}
+{"level":"info","ts":1741126673.1804032,"msg":"starting web server 127.0.0.1:9898"}
+{"level":"info","ts":1741126674.2095711,"msg":"running task","task":"collect garbage","runAt":"2025-03-04T22:17:54Z"}
+{"level":"info","ts":1741126674.210255,"msg":"collecting garbage operations","operations_removed":0,"removed_by_age":0,"removed_by_limit":0,"removed_by_snapshot_forgotten":0,"removed_by_type":{}}
+{"level":"info","ts":1741126674.210371,"msg":"collecting garbage logs","logs_removed":0}
+{"level":"info","ts":1741126674.2103891,"logger":"collect garbage","msg":"task finished","duration":0.000664446}
+{"level":"info","ts":1741126674.2104871,"msg":"scheduled task","task":"collect garbage","runAt":"2025-03-05T22:17:54Z"}

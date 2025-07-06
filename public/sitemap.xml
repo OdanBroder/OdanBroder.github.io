@@ -98,6 +98,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/htb/machines/artificial/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/authors/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -119,6 +124,11 @@
   </url>
   <url>
     <loc>http://localhost:1313/htb/</loc>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/htb/machines/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>

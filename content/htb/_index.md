@@ -1,6 +1,6 @@
 ---
 title: "HTB"
-description: "Hack The Box machine write-ups and walkthroughs."
+description: "Hack The Box machine, ctf,.... write-ups and walkthroughs."
 
 cascade:
   showDate: true
@@ -9,7 +9,9 @@ cascade:
 ---
 
 {{< lead >}}
-Write-ups for Hack The Box machines, covering enumeration, exploitation, and post-exploitation.
+Write-ups for Hack The Box machines, ctf,....., covering enumeration, exploitation, and post-exploitation.
 {{< /lead >}}
 
 Explore boxes you've rooted, categorized by difficulty or technique.
+Find the flag.
+Exploit the target.
