@@ -190,7 +190,7 @@ Flag: 72c6100ad4e95442bfd90e3d0f66b706
 
 ## System Pwned
 
-Knowing the system runs Linux, I used ***linpeas.sh*** from (PEASS-ng)[https://github.com/peass-ng/PEASS-ng/releases/tag/20250701-bdcab634] to enumerate potential privilege escalation vectors.
+Knowing the system runs Linux, I used ***linpeas.sh*** from [PEASS-ng](https://github.com/peass-ng/PEASS-ng/releases/tag/20250701-bdcab634) to enumerate potential privilege escalation vectors.
 
 Fired up a server on my end and fetched ```linpeas.sh``` to the target — time to hunt for root.
 
