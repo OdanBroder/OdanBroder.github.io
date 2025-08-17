@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to Blowfish! :tada: on Doan Duc Anh</title><link>https://odanbroder.github.io/</link><description>Recent content in Welcome to Blowfish! :tada: on Doan Duc Anh</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Doan Duc Anh was here</copyright><lastBuildDate>Mon, 03 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://odanbroder.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Compress</title><link>https://odanbroder.github.io/ctf/pwnme-2025/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnme-2025/</guid><description>Just the small description for challenge compress in PwnMe CTF Quals 2025</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnme-2025/featured.jpg"/></item><item><title>Race Condition</title><link>https://odanbroder.github.io/notes/race-condition/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/race-condition/</guid><description>Techniques for Exploiting Race Conditions</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/race-condition/featured.jpg"/></item><item><title>pwnable.tw</title><link>https://odanbroder.github.io/ctf/pwnable.tw/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnable.tw/</guid><description>&lt;h2 class="relative group">calc
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to Blowfish! :tada: on Doan Duc Anh</title><link>https://odanbroder.github.io/</link><description>Recent content in Welcome to Blowfish! :tada: on Doan Duc Anh</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Doan Duc Anh was here</copyright><lastBuildDate>Sun, 17 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://odanbroder.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>LLMNR/NBT-NS Poisoning and SMB Relay</title><link>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</guid><description>LLMNR/NBT-NS Poisoning and SMB Relay</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/featured.png"/></item><item><title>Artificial</title><link>https://odanbroder.github.io/htb/machines/artificial/</link><pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/htb/machines/artificial/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+Explore how to compromise a machine that hosts machine learning models built with Keras.
+&lt;/div>
+&lt;h2 class="relative group">Exploitation Walkthrough
+&lt;div id="exploitation-walkthrough" class="anchor">&lt;/div>
+&lt;span
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#exploitation-walkthrough" aria-label="Anchor">#&lt;/a>
+&lt;/span>
+&lt;/h2>
+&lt;p align="center">
+&lt;img src="img/walkthrough/overall.png" />
+&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/htb/machines/artificial/featured.png"/></item><item><title>Compress</title><link>https://odanbroder.github.io/ctf/pwnme-2025/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnme-2025/</guid><description>Just the small description for challenge compress in PwnMe CTF Quals 2025</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnme-2025/featured.jpg"/></item><item><title>Race Condition</title><link>https://odanbroder.github.io/notes/race-condition/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/race-condition/</guid><description>Techniques for Exploiting Race Conditions</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/race-condition/featured.jpg"/></item><item><title>pwnable.tw</title><link>https://odanbroder.github.io/ctf/pwnable.tw/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnable.tw/</guid><description>&lt;h2 class="relative group">calc
 &lt;div id="calc" class="anchor">&lt;/div>
 &lt;span
 class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
@@ -28,16 +40,4 @@ srcset="
 data-zoom-src="https://odanbroder.github.io/ctf/pwnable.tw/img/calc/main.png"
 src="https://odanbroder.github.io/ctf/pwnable.tw/img/calc/main.png">
 &lt;/figure>
-&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnable.tw/featured.png"/></item><item><title>Artificial</title><link>https://odanbroder.github.io/htb/machines/artificial/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/htb/machines/artificial/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
-Explore how to compromise a machine that hosts machine learning models built with Keras.
-&lt;/div>
-&lt;h2 class="relative group">Exploitation Walkthrough
-&lt;div id="exploitation-walkthrough" class="anchor">&lt;/div>
-&lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#exploitation-walkthrough" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p align="center">
-&lt;img src="img/walkthrough/overall.png" />
-&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/htb/machines/artificial/featured.png"/></item></channel></rss>
+&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnable.tw/featured.png"/></item></channel></rss>
