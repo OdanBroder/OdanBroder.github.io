@@ -1,7 +1,8 @@
 ---
 title: "Artificial"
+date: 2025-07-07
 description: "Exploiting a system running Keras-based machine learning models."
-
+tags: ["HTB", "Machines"]
 cascade:
   showDate: true
   showAuthor: false

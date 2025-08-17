@@ -21,6 +21,16 @@
   weight = 15
 
 [[main]]
+  name = "Operation Path"
+  weight = 20
+
+[[main]]
+  name = "Red Team"
+  parent = "Operation Path"
+  pageRef = "RedTeam"
+  weight = 16
+
+[[main]]
   name = "Write Up"
   weight = 20
 
