@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shell on Doan Duc Anh</title>
+    <link>http://localhost:1313/tags/shell/</link>
+    <description>Recent content in Shell on Doan Duc Anh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Doan Duc Anh was here</copyright>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SSH</title>
+      <link>http://localhost:1313/notes/services/ssh/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/notes/services/ssh/</guid>
+      <description>A deep dive into the Secure Shell (SSH) protocol, its purpose, and common uses in secure communication.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/notes/services/ssh/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>
