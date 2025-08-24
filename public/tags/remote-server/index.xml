@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote-Server on Doan Duc Anh</title>
+    <link>http://localhost:1313/tags/remote-server/</link>
+    <description>Recent content in Remote-Server on Doan Duc Anh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Doan Duc Anh was here</copyright>
+    <atom:link href="http://localhost:1313/tags/remote-server/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Remote SSH</title>
+      <link>http://localhost:1313/redteam/initialaccess/phishing/vscode/remotessh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/redteam/initialaccess/phishing/vscode/remotessh/</guid>
+      <description>Malicous remote SSH</description>
+      
+    </item>
+    
+  </channel>
+</rss>
