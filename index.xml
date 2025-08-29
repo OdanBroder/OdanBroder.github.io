@@ -1,31 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to Blowfish! :tada: on Doan Duc Anh</title><link>https://odanbroder.github.io/</link><description>Recent content in Welcome to Blowfish! :tada: on Doan Duc Anh</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Doan Duc Anh was here</copyright><lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://odanbroder.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>SSH</title><link>https://odanbroder.github.io/notes/services/ssh/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/services/ssh/</guid><description>A deep dive into the Secure Shell (SSH) protocol, its purpose, and common uses in secure communication.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/services/ssh/featured.jpg"/></item><item><title>Remote SSH</title><link>https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/</link><pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/</guid><description>Exploring malicious remote SSH access and its red team implications.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/featured.gif"/></item><item><title>Marco</title><link>https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/</link><pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/</guid><description>Exploring Marco — a blend of simplicity and precision in the digital realm.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/featured.jpg"/></item><item><title>LLMNR/NBT-NS Poisoning and SMB Relay</title><link>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</guid><description>LLMNR/NBT-NS Poisoning and SMB Relay</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/featured.png"/></item><item><title>Artificial</title><link>https://odanbroder.github.io/htb/machines/artificial/</link><pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/htb/machines/artificial/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Welcome to Blowfish! :tada: on Doan Duc Anh</title><link>https://odanbroder.github.io/</link><description>Recent content in Welcome to Blowfish! :tada: on Doan Duc Anh</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>Doan Duc Anh was here</copyright><lastBuildDate>Fri, 29 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://odanbroder.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Bypassing Network Restrictions Through RDP Tunneling</title><link>https://odanbroder.github.io/redteam/persistence/scheduledtasks-services/rdptunneling/</link><pubDate>Fri, 29 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/persistence/scheduledtasks-services/rdptunneling/</guid><description>When the firewall says &amp;rsquo;no way in,&amp;rsquo; we tunnel our own highway.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/persistence/scheduledtasks-services/rdptunneling/featured.jpg"/></item><item><title>SSH</title><link>https://odanbroder.github.io/notes/services/ssh/</link><pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/services/ssh/</guid><description>A deep dive into the Secure Shell (SSH) protocol, its purpose, and common uses in secure communication.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/services/ssh/featured.jpg"/></item><item><title>Remote SSH</title><link>https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/</link><pubDate>Sun, 24 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/</guid><description>Exploring malicious remote SSH access and its red team implications.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/initialaccess/phishing/vscode/remotessh/featured.gif"/></item><item><title>Marco</title><link>https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/</link><pubDate>Wed, 20 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/</guid><description>Exploring Marco — a blend of simplicity and precision in the digital realm.</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/initialaccess/phishing/office365/marco/featured.jpg"/></item><item><title>LLMNR/NBT-NS Poisoning and SMB Relay</title><link>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/</guid><description>LLMNR/NBT-NS Poisoning and SMB Relay</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/redteam/exploitchain/llmnr_nbt-ns/featured.png"/></item><item><title>Artificial</title><link>https://odanbroder.github.io/htb/machines/artificial/</link><pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/htb/machines/artificial/</guid><description>&lt;div class="lead text-neutral-500 dark:text-neutral-400 !mb-9 text-xl"&gt;
 Explore how to compromise a machine that hosts machine learning models built with Keras.
-&lt;/div>
-&lt;h2 class="relative group">Exploitation Walkthrough
-&lt;div id="exploitation-walkthrough" class="anchor">&lt;/div>
+&lt;/div&gt;
+&lt;h2 class="relative group"&gt;Exploitation Walkthrough
+&lt;div id="exploitation-walkthrough" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#exploitation-walkthrough" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;p align="center">
-&lt;img src="img/walkthrough/overall.png" />
-&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/htb/machines/artificial/featured.png"/></item><item><title>Compress</title><link>https://odanbroder.github.io/ctf/pwnme-2025/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnme-2025/</guid><description>Just the small description for challenge compress in PwnMe CTF Quals 2025</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnme-2025/featured.jpg"/></item><item><title>Race Condition</title><link>https://odanbroder.github.io/notes/race-condition/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/race-condition/</guid><description>Techniques for Exploiting Race Conditions</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/race-condition/featured.jpg"/></item><item><title>pwnable.tw</title><link>https://odanbroder.github.io/ctf/pwnable.tw/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnable.tw/</guid><description>&lt;h2 class="relative group">calc
-&lt;div id="calc" class="anchor">&lt;/div>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#exploitation-walkthrough" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;p align="center"&gt;
+&lt;img src="img/walkthrough/overall.png" /&gt;
+&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/htb/machines/artificial/featured.png"/></item><item><title>Compress</title><link>https://odanbroder.github.io/ctf/pwnme-2025/</link><pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnme-2025/</guid><description>Just the small description for challenge compress in PwnMe CTF Quals 2025</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnme-2025/featured.jpg"/></item><item><title>Race Condition</title><link>https://odanbroder.github.io/notes/race-condition/</link><pubDate>Fri, 03 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/notes/race-condition/</guid><description>Techniques for Exploiting Race Conditions</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/notes/race-condition/featured.jpg"/></item><item><title>pwnable.tw</title><link>https://odanbroder.github.io/ctf/pwnable.tw/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://odanbroder.github.io/ctf/pwnable.tw/</guid><description>&lt;h2 class="relative group"&gt;calc
+&lt;div id="calc" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#calc" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h2>
-&lt;h3 class="relative group">Let&amp;rsquo;s check
-&lt;div id="lets-check" class="anchor">&lt;/div>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#calc" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h2&gt;
+&lt;h3 class="relative group"&gt;Let&amp;rsquo;s check
+&lt;div id="lets-check" class="anchor"&gt;&lt;/div&gt;
 &lt;span
-class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lets-check" aria-label="Anchor">#&lt;/a>
-&lt;/span>
-&lt;/h3>
-&lt;p>
-&lt;figure>
+class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100"&gt;
+&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#lets-check" aria-label="Anchor"&gt;#&lt;/a&gt;
+&lt;/span&gt;
+&lt;/h3&gt;
+&lt;p&gt;
+&lt;figure&gt;
 &lt;img
 class="my-0 rounded-md"
 loading="lazy"
@@ -38,6 +38,6 @@ srcset="
 /ctf/pwnable.tw/img/calc/main_hu_27ab9df07f59010b.png 1280w
 "
 data-zoom-src="https://odanbroder.github.io/ctf/pwnable.tw/img/calc/main.png"
-src="https://odanbroder.github.io/ctf/pwnable.tw/img/calc/main.png">
-&lt;/figure>
-&lt;/p></description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnable.tw/featured.png"/></item></channel></rss>
+src="https://odanbroder.github.io/ctf/pwnable.tw/img/calc/main.png"&gt;
+&lt;/figure&gt;
+&lt;/p&gt;</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://odanbroder.github.io/ctf/pwnable.tw/featured.png"/></item></channel></rss>
