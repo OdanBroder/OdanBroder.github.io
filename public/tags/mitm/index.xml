@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MITM on Doan Duc Anh</title>
+    <link>http://localhost:1313/tags/mitm/</link>
+    <description>Recent content in MITM on Doan Duc Anh</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Doan Duc Anh was here</copyright>
+    <lastBuildDate>Tue, 02 Sep 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/mitm/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hands-on MITM: Using Bettercap, Ettercap, and Scapy in a Red Team Engagement</title>
+      <link>http://localhost:1313/redteam/tatic/t1557/initial/</link>
+      <pubDate>Tue, 02 Sep 2025 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/redteam/tatic/t1557/initial/</guid>
+      <description>A practical walkthrough of Man-in-the-Middle attacks in red team operations using Bettercap, Ettercap, and Scapy.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/redteam/tatic/t1557/initial/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>

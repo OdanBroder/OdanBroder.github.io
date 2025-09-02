@@ -7,7 +7,7 @@ description: "A deep dive into using SSH and RDP tunneling to slip past network 
 tags: ["redteam", "ssh", "rdp", "persistence", "evasion"]
 layoutBackgroundBlur: true
 showDate: true
-showAuthor: false
+showAuthor: true
 ---
 
 ## Scenarios

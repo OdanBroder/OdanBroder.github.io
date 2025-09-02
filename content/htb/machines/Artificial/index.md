@@ -5,7 +5,7 @@ description: "Exploiting a system running Keras-based machine learning models."
 tags: ["HTB", "Machines"]
 cascade:
   showDate: true
-  showAuthor: false
+  showAuthor: true
   invertPagination: true
 ---
 

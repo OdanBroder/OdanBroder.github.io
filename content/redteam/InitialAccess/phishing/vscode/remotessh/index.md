@@ -7,7 +7,7 @@ description: "Hands-on look at Remote SSH techniques, from initial access to pot
 tags: ["redteam", "ssh", "phishing", "vscode", "remote-access"]
 layoutBackgroundBlur: true
 showDate: true
-showAuthor: false
+showAuthor: true
 ---
 
 ## Scenarios

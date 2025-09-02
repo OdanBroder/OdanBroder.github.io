@@ -6,6 +6,7 @@ summary: "Exploring Marco — a blend of simplicity and precision in the digital
 description: "Marco is more than just a name — it represents clarity, focus, and the art of navigating complex systems with elegance. This post dives into its meaning, applications, and lessons it brings."
 tags: ["redteam", "phishing", "office365", "C2"]
 layoutBackgroundBlur: true
+showAuthor: true
 ---
 
 ## Wrap arround

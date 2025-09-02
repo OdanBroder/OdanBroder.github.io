@@ -3,6 +3,120 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/tags/bettercap/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/ettercap/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/tatic/t1557/initial/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/mitm/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/network/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/redteam/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/scapy/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/tatic/t1557/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/tatic/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/persistence/scheduledtasks-services/rdptunneling/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/evasion/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/persistence/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/persistence/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/rdp/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/persistence/scheduledtasks-services/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/ssh/</loc>
+    <lastmod>2025-08-29T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/tags/networking/</loc>
     <lastmod>2025-08-25T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -45,18 +159,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-25T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/redteam/initialaccess/</loc>
     <lastmod>2025-08-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -75,18 +177,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/redteam/</loc>
-    <lastmod>2025-08-24T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/redteam/</loc>
-    <lastmod>2025-08-24T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/redteam/initialaccess/phishing/vscode/remotessh/</loc>
     <lastmod>2025-08-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -94,12 +184,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/tags/remote-access/</loc>
-    <lastmod>2025-08-24T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/ssh/</loc>
     <lastmod>2025-08-24T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -178,12 +262,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/tags/ntlm-relay/</loc>
-    <lastmod>2025-08-17T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/red-team/</loc>
     <lastmod>2025-08-17T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -364,11 +442,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/notes/overview/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/redteam/persistence/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
