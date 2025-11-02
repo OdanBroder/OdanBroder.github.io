@@ -3,6 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/redteam/credentialaccess/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/credentials/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/credentialaccess/dpapisuite/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/redteam/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/redteam/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-02T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/tags/bettercap/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -33,18 +75,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/redteam/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/tags/redteam/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/tags/scapy/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
@@ -57,19 +87,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/redteam/tatic/</loc>
-    <lastmod>2025-09-02T00:00:00+00:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-09-02T00:00:00+00:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -397,11 +415,6 @@
   </url>
   <url>
     <loc>http://localhost:1313/redteam/c2/</loc>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/redteam/credentialaccess/</loc>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
   </url>
